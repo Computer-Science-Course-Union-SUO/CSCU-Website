@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { jwtDecode } from 'jwt-decode'
 
-const COMING_SOON_PATHS = ['/login', '/resources']
+const COMING_SOON_PATHS = ['/login', '/resources'] 
 
 function isComingSoon(pathname: string): boolean {
     return COMING_SOON_PATHS.some(p => pathname === p || pathname.startsWith(`${p}/`))
